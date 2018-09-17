@@ -31,8 +31,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a.article-title:hover {
-  color: #428bca;
+  color:ghostwhite;
   text-decoration: none;
+  font-family: 'Times New Roman', Times, serif
 }
 
 .article-content {

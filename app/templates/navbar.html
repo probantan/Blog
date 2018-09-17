@@ -13,15 +13,18 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
+
                 </button>
        <ul class="nav navbar-nav navbar-right">
-                   <a  href="{{url_for('main.home')}}"style=" font-weight:bolder; font-size:20px; color:white; right:1400px;position:relative; top:10px;">Home</a>
+                   <a  href="{{url_for('main.home')}}"style=" font-weight:bolder; font-size:20px; color:yellow; right:1470px;position:relative; top:10px;">Home</a>
+                  <a href=""style=" font-weight:bolder; font-size:30px;color:green; float:left; position:relative;left:-400px;top:7px;  font-family:   'Times New Roman', Times, serif;
+                ">JOIN WRITTERS..</a>
                   {% if current_user.is_authenticated %}
-                  <li ><a href="{{url_for('main.new_post')}}"style=" font-weight:bolder; font-size:20px;color:white;">New Post</a></li>
+                  <li ><a href="{{url_for('main.new_post')}}"style=" font-weight:bolder; font-size:20px;color:ghostwhite;">New Post</a></li>
                   <li><a href="{{url_for('main.profile',uname=current_user.username)}}"style=" font-weight:bolder; font-size:20px;color:white;">Profile</a></li>
-                  <li ><a href="{{url_for('auth.logout')}}"style=" font-weight:bolder; font-size:20px;color:white;">Sign out</a></li>
+                  <li ><a href="{{url_for('auth.logout')}}"style=" font-weight:bolder; font-size:20px;color:ghostwhite;">Sign out</a></li>
                   {% else %}
-                  <li><a href="{{url_for('auth.login')}}"style=" font-weight:bolder; font-size:20px;color:white;">Sign in</a></li>
+                  <li><a href="{{url_for('auth.login')}}"style=" font-weight:bolder; font-size:20px;color:ghostwhite;">Sign in</a></li>
                   {%endif%}
 
             </div>
@@ -30,3 +33,4 @@
     </div>
   </body>
 </html>
+
