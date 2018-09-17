@@ -1,6 +1,7 @@
 
 {% extends "base.html" %}
 {% block content %}
+<div class="container">
   <article class="media content-section">
     <div class="media-body">
       <div class="article-metadata">
@@ -8,7 +9,7 @@
         <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
         {% if post.author == current_user %}
           <div>
-            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('main.update_post', post_id=post.id) }}">Update</a>
+            <a class="btn btn-primary btn-sm mt-1 mb-1" href="{{ url_for('main.update_post', post_id=post.id) }}">Update</a>
             <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
           </div>
         {% endif %}
