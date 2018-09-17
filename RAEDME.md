@@ -9,9 +9,12 @@ This application enables the users to:
 * Update and view different posts
 * Vote pitches
 
+
+* Note: You can only be allowed to delete or to update posts right after you've signed up and loggeg in...In no the delete and update button will not be able to work or eve show
+
 ## Link
 
-* To view the project on Heroku just click the link https://blog.herokuapp.com/
+* To view the project on Heroku just click the link https://blog-p.herokuapp.com/home
 
 ### Prerequisites
 
