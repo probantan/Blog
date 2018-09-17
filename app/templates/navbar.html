@@ -15,7 +15,7 @@
                   <span class="icon-bar"></span>
                 </button>
        <ul class="nav navbar-nav navbar-right">
-                   <a  href="{{url_for('main.home')}}"style=" font-weight:bolder; font-size:20px; color:white; float:left;">Home</a>
+                   <a  href="{{url_for('main.home')}}"style=" font-weight:bolder; font-size:20px; color:white; float:left;position:relative; bottom:-15px;">Home</a>
                   {% if current_user.is_authenticated %}
                   <li ><a href="{{url_for('main.new_post')}}"style=" font-weight:bolder; font-size:20px;color:white;">New Post</a></li>
                   <li><a href="{{url_for('main.profile',uname=current_user.username)}}"style=" font-weight:bolder; font-size:20px;color:white;">Profile</a></li>
