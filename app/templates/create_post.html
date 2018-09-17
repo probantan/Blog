@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container"
 <div class="content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4"> New Post</legend>
+            <legend class="border-bottom mb-4">{{legend}}</legend>
             <div class="form-group">
                 {{ form.title.label(class="form-control-label") }}
                 {% if form.title.errors %}
@@ -33,8 +34,10 @@
             </div>
         </fieldset>
         <div class="form-group">
-            {{ form.submit(class="btn btn-outline-info") }}
+            {{ form.submit(class="btn btn-primary") }}
         </div>
     </form>
+    </div>
+
 </div>
 {% endblock content %}

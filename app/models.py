@@ -19,6 +19,7 @@ class User(UserMixin,db.Model):
     profile_pic_path = db.Column(db.String())
     password_hash = db.Column(db.String(255))
     pass_secure = db.Column(db.String(255))
+    posts = db.relationship('Post', backref='author', lazy=True)
 
 
     @property
@@ -48,7 +49,7 @@ class Role(db.Model):
         return f'User {self.name}' 
 
 
-class post(db.Model):
+class Post(db.Model):
     __tablename__ = 'post'
 
     id = db.Column(db.Integer, primary_key=True)
