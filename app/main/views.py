@@ -104,3 +104,12 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('post.html'))
+
+
+@main.route('/view/comment/<int:id>')
+def view_comments(id):
+    '''
+    Function that returs  the comments belonging to a particular pitch
+    '''
+    comments = Comment.get_comments(id)
+    return render_template('view_comments.html',comments = comments, id=id)
